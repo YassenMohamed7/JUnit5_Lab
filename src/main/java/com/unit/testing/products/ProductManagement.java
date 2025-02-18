@@ -22,15 +22,16 @@ public class ProductManagement {
         products.add(product);
     }
 
+
     public Product findProductById(int id) {
-        return products.stream()
-                .filter(p -> p.getId() == id)
-                .findFirst()
-                .orElseThrow(() -> new NoSuchElementException("Product not found"));
+        return products.stream().filter(p -> p.getId() == id).findFirst().orElse(null);
     }
 
     public boolean isProductInStock(int id) {
         Product product = findProductById(id);
+        if(product == null) {
+            return false;
+        }
         return product.getStock() > 0;
     }
 
