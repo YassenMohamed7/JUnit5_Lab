@@ -9,10 +9,10 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 
-@AllArgsConstructor
-@NoArgsConstructor
+
 @Data
 public class ProductManagement {
+
     private List<Product> products = new ArrayList<>();
 
     public void addProduct(Product product) {
