@@ -39,4 +39,12 @@ public class ProductManagement {
         Product product = findProductById(id);
         product.setPrice(newPrice);
     }
+
+    public void deleteProductFromStock(int id) {
+        Product product = findProductById(id);
+        if(product == null) {
+            throw new IllegalArgumentException("Product ID does not exist");
+        }
+        products.remove(product);
+    }
 }
