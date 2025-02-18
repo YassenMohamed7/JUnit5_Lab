@@ -13,7 +13,11 @@ import java.util.NoSuchElementException;
 @Data
 public class ProductManagement {
 
-    private List<Product> products = new ArrayList<>();
+    private List<Product> products;
+
+    public ProductManagement() {
+        products = new ArrayList<>();
+    }
 
     public void addProduct(Product product) {
         if (products.stream().anyMatch(p -> p.getId() == product.getId())) {
@@ -21,7 +25,6 @@ public class ProductManagement {
         }
         products.add(product);
     }
-
 
     public Product findProductById(int id) {
         return products.stream().filter(p -> p.getId() == id).findFirst().orElse(null);
