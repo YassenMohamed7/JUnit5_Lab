@@ -46,7 +46,7 @@ Disable tests based on specific conditions:
 
 #### a. Disable Deleting Product Test for Your OS
 - **Objective:** Disable the "delete product" test for your operating system.
-- **Annotations Used:** `@Disabled`
+- **Annotations Used:** `@Disabled` or `@DisabledOnOS`
 
 ---
 
