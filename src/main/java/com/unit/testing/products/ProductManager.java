@@ -8,11 +8,11 @@ import java.util.List;
 
 
 @Data
-public class ProductManagement {
+public class ProductManager {
 
     private List<Product> products;
 
-    public ProductManagement() {
+    public ProductManager() {
         products = new ArrayList<>();
     }
 
