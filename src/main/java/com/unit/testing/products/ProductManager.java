@@ -24,7 +24,11 @@ public class ProductManager {
     }
 
     public Product findProductById(int id) {
-        return products.stream().filter(p -> p.getId() == id).findFirst().orElse(null);
+        return products.
+                stream()
+                .filter(p -> p.getId() == id)
+                .findFirst()
+                .orElse(null);
     }
 
     public boolean isProductInStock(int id) {

@@ -7,7 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@Builder
+@Builder(setterPrefix = "set")
 public class Product {
     private int id;
     private String name;
